@@ -1,0 +1,14 @@
+birkhoff-ru.tex
+library.bib
+mppics/pic-10.mps
+mppics/pic-100.mps
+mppics/pic-110.mps
+mppics/pic-20.mps
+mppics/pic-30.mps
+mppics/pic-40.mps
+mppics/pic-50.mps
+mppics/pic-60.mps
+paper-ru.sty
+mppics/macros.mp
+mppics/pic.mp
+

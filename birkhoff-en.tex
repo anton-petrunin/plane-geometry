@@ -1,0 +1,329 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{paper-en}
+\usepackage{hyperref}
+
+\def\thetitle{An axiom of unique reflection}
+\def\theauthors{Nina Lebedeva and Anton Petrunin}
+
+\hypersetup{colorlinks=true,
+citecolor=black,
+linkcolor=black,
+anchorcolor=black,
+filecolor=black,
+menucolor=black,
+urlcolor=black,
+pdftitle={\thetitle},
+pdfauthor={\theauthors}
+}
+
+%\overfullrule=100mm
+
+\begin{document}
+
+\title{\thetitle}
+\author{\theauthors}
+\date{}
+\maketitle
+
+\begin{abstract}
+We characterize neutral planes by three metric conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
+\end{abstract}
+
+We assume that the reader is not afraid of metric spaces or the axioms of neutral geometry.
+
+\begin{thm}{Theorem}\label{thm:main}
+A nontrivial 3-point-homogeneous geodesic space is isometric to a neutral plane
+if for any two distinct points there is exactly one nonidentity isometry fixing both.
+\end{thm}
+
+Let us spell out the terms.
+A space is \emph{nontrivial} if it has at least two points.
+
+A \emph{geodesic} in a metric space $M$ is an isometric map from a real interval to $M$.
+The image of a geodesic with endpoints $x$ and $y$ will be denoted by $[xy]$; we also call it a \emph{geodesic}.
+If any two points in $M$ can be joined by a geodesic, then $M$ is called a \emph{geodesic space}.
+Thus the geodesic condition is a weakened form of Euclid's first postulate: \textit{a straight line can be drawn from any point to any point}.
+
+An \emph{isometry} of $M$ is a bijection from $M$ to itself that preserves distances.
+Three-point homogeneity is essentially the side-side-side congruence criterion.
+A metric space $M$ is \emph{3-point-homogeneous} if for any points $x_1$, $x_2$, $x_3$, $y_1$, $y_2$, $y_3\in M$ the equalities $|x_i-x_j|=|y_i-y_j|$ for all $i$ and $j$ imply that some isometry of $M$ sends $x_i$ to $y_i$ for each~$i$.
+Here $|p-q|$ denotes the distance between points $p,q\in M$.
+The points in a triple need not be distinct; in particular, 3-point homogeneity implies 2-point homogeneity and ordinary (1-point) homogeneity.
+
+In a neutral plane, the only nonidentity isometry fixing two distinct points is, of course, reflection in the line thru them.
+Thus the last condition of the theorem can be regarded as the \emph{unique reflection axiom}.
+To characterize the Euclidean plane, we can add the following \emph{doubling axiom}:
+
+\parit{The space is isometric to a copy of itself with all distances doubled.}
+
+\medskip
+
+We formulate our axioms in purely metric terms.
+%This naturally brings together metric geometry and the foundations of geometry and may be useful in teaching.
+A closely related approach was proposed by George Birkhoff \cite{birkhoff1932}, but he used angle measure as an additional primitive notion.
+Using side-side-side congruence in this setting is not new.
+It was used by Karol Borsuk and Wanda Szmielew \cite[part I chap. II § 4]{borsuk-szmielew}, and by Alexandr Alexandrov \cite{alexandrov1994};
+in both cases, equality of angles is defined thru equality of sides of auxiliary triangles.
+
+Note that we do not assume local compactness; otherwise our theorem would follow at once from a theorem of Jacques Tits~\cite[IV.E § 3.59 cor. 2]{tits}, which classifies locally compact 2-point-homogeneous geodesic spaces.
+All the ideas in the proof are elementary, and many are ancient.
+This note was prompted by another result of ours~\cite{lebedeva-petrunin}.%%%???
+
+\section*{Proof}
+
+Assume that a metric space $M$ satisfies the assumptions of our theorem.
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-5mm
+\includegraphics{mppics/pic-10}
+\vskip-0mm
+\end{wrapfigure}
+
+\parbf{Two distances.}
+Let $p,q\in M$ be two distinct points.
+The distances $r=|p-x|$ and $s=|q-x|$ leave at most two possibilities for $x$.
+
+Indeed, there is a unique nonidentity isometry, say $\sigma$, fixing $p$ and~$q$.
+If $|p-y|=r$ and $|q-y|=s$, then 3-point homogeneity gives an isometry fixing $p$ and $q$ and sending $x$ to $y$.
+Thus $y=x$ if the isometry is the identity, and $y=\sigma(x)$ otherwise --- there is no third option.
+
+\parbf{Local uniqueness of geodesics.}
+We will show that there is $\eps_0>0$ such that any two points $x$ and $y$ at distance less than $\eps_0$ are joined by a unique geodesic.
+
+A \emph{midpoint} of $x$ and $y$ is a point $m$ such that
+\[|x-m|=|y-m|=\tfrac12\cdot|x-y|.\]
+If the midpoint is unique, then every geodesic $[xy]$ contains it.
+If midpoints are unique for all pairs of points at distance less than $\eps_0$, then repeated bisection gives uniqueness of geodesics of length less than $\eps_0$.
+
+{
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-5mm
+\includegraphics{mppics/pic-20}
+\vskip-0mm
+\end{wrapfigure}
+
+As observed above, a pair of points has at most two midpoints.
+Suppose midpoints are not always unique, say $p$ and $q$ have two midpoints $m_1$ and $m_2$; set $\eps_0\z=|m_1-m_2|$.
+
+Let $0<|x-y|<\eps_0$.
+Choose points $\bar x\z\in [m_1p]$ and $\bar y\in [m_1q]$ at distance $\tfrac12\cdot|x-y|$ from $m_1$.
+By the triangle inequality, $|\bar x-\bar y|=|x-y|$.
+
+}
+
+Suppose $x$ and $y$ have two midpoints, say $n_1$ and $n_2$.
+By 3-point homogeneity, there is an isometry
+$\iota$ sending $x\mapsto \bar x$, $y\mapsto \bar y$, and $n_1\mapsto m_1$.
+Then (again by the triangle inequality) the point $m_3=\iota(n_2)$ would be a midpoint of $p$ and $q$.
+Note that $m_3\ne m_1$ and $m_3\ne m_2$; the latter follows since
+\[|m_3-m_1|\le |x-y|<\eps_0=|m_1-m_2|.\]
+Thus the midpoints $m_1$, $m_2$, and $m_3$ are distinct, which is impossible.
+
+{
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-30}
+\vskip-0mm
+\end{wrapfigure}
+
+\parbf{No branching.}
+We will show that \textit{geodesics in $M$ do not branch}, that is, if
+two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz]$ contains $[xz']$ or $[xz]$ is contained in $[xz']$.
+
+If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|=|x-z'|<\eps_0$ and $z\ne z'$.
+
+
+
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $x,y$ and sending $z$ to $z'$.
+But there is also a nonidentity isometry, say $\tau$, fixing $x$ and $z$; it must fix every point on the unique geodesic $[xz]$, including~$y$.
+Thus $\sigma$ and $\tau$ are two distinct nonidentity isometries fixing $x$ and $y$ --- a contradiction.
+
+}
+
+\parbf{Lines.}
+Any geodesic can be extended to a \emph{local geodesic} $\gamma\colon\mathbb R\to M$; this means that sufficiently short segments of $\gamma$ are geodesics.
+For this, use 2-point homogeneity to align a short final segment with the start of a longer geodesic.
+By local uniqueness, they agree on the overlap, giving an extension.
+Repeating this with the same small step in both directions produces $\gamma$.
+The absence of branching ensures that a local geodesic is uniquely determined by any of its nontrivial segments.
+
+Let $d$ be the diameter of $M$; we will show that $d=\infty$.
+The following argument is borrowed from Garrett Birkhoff~\cite{birkhoff1944}.
+
+Note that $M$ contains a geodesic of any length less than $d$.
+By 2-point homogeneity and the absence of branching, these geodesics can be aligned with the local geodesic $\gamma$ constructed above.
+Thus
+\[|\gamma(t)-\gamma(s)|=|t-s|\quad\text{if}\quad |t-s|<d.
+\eqlbl{eq:|t-s|}\]
+
+Suppose $d<\infty$; then by continuity, \ref{eq:|t-s|} also holds when $|t-s|=d$.
+Choose a small $\eps>0$ and set
+\[p=\gamma(0),
+\quad x=\gamma(d+\eps),
+\quad r=|p-x|,
+\quad y=\gamma(r),
+\quad\text{and}\quad
+z=\gamma(\eps).\]
+By the triangle inequality, $d-\eps\le r\le d$.
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-8mm
+\includegraphics{mppics/pic-40}
+\vskip-0mm
+\end{wrapfigure}
+
+The points $x$ and $y$ are equidistant from $p$, so there is an isometry $\sigma$ fixing $p$ and swapping $x$ and~$y$.
+It reverses the unique geodesic $[xy]$ and hence fixes its midpoint, say $m$.
+By our assumptions, there is another nonidentity isometry fixing $p$ and $z$;
+it must fix the unique geodesic $[pz]$, and hence every point on $\gamma$.
+We now have two distinct nonidentity isometries fixing $p$ and $m$ --- a contradiction.
+
+Thus $d=\infty$, and every segment of the local geodesic $\gamma$ is a geodesic;
+that is, $\gamma$ is a geodesic, an isometric embedding of the whole real line into $M$.
+Such geodesics will be called \emph{lines}.
+
+Let us check that the geodesic between points $x$ and $y$ is unique.
+Suppose there are two.
+Extend one of them beyond $y$ to a point $z$.
+The other, together with the same segment $[yz]$, is also a geodesic $[xz]$.
+The two geodesics branch, which is impossible.
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-5mm
+\includegraphics{mppics/pic-50}
+\vskip-0mm
+\end{wrapfigure}
+
+Thus there is a unique line thru any two distinct points.
+There is also a unique nonidentity isometry fixing every point on a given line; we call it the \emph{reflection} in that line.
+The assumptions of the theorem also imply that a reflection is an involution; that is, it is its own inverse.
+
+\parbf{Point reflection.}
+Choose a point $m$.
+Given a point $x$, extend the geodesic $[xm]$ beyond $m$ by its own length.
+Denote the opposite endpoint by $x'$ and set $m'=m$.
+By uniqueness of the line, the map $\theta\colon x\mapsto x'$ is well defined.
+We will show that it is an isometry.
+This isometry will be called the \emph{point reflection} about $m$.
+
+\begin{figure}[h!]
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-60}
+\vskip-0mm
+\end{figure}
+
+Since $x''=x$, the map $\theta\colon x\mapsto x'$ is bijective, so it suffices to check that
+\[|x'-y'|=|x-y|\eqlbl{eq:xy=xy}\]
+for any two points $x$ and $y$.
+We may assume that $m$, $x$, and $y$ are pairwise distinct; otherwise there is nothing to prove.
+
+Choose $\eps>0$ smaller than $|m-x|$ and $|m-y|$, and points $\bar x\in[mx]$ and $\bar y\in[my]$ at distance $\eps$ from $m$.
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $m$ and swapping $\bar x$ and $\bar y'$.
+It sends lines to lines, so it also swaps $\bar x'$ and $\bar y$.
+In particular, $|\bar x-\bar y|=|\bar x'-\bar y'|$.
+Again by 3-point homogeneity, there is an isometry fixing $m$ and sending $\bar x\mapsto \bar x'$ and $\bar y\mapsto \bar y'$.
+By uniqueness of extension, it sends $x\mapsto x'$ and $y\mapsto y'$;
+hence \ref{eq:xy=xy}.
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-8mm
+\includegraphics{mppics/pic-100}
+\vskip-0mm
+\end{wrapfigure}
+
+\parbf{Line reflections.}
+Let $\sigma$ be the reflection in a line $\ell$.
+We will show that \textit{$\sigma$ fixes only points on $\ell$}.
+
+Choose two distinct points $p$ and $q$ on $\ell$, and let $m$ be their midpoint.
+Suppose $\sigma(u)=u$ for some point $u\notin\ell$.
+Then $\sigma$ fixes every point on the broken line $[pu]\cup[uq]$.
+By uniqueness of lines, the broken line does not pass thru $m$.
+As a point $x$ moves along the broken line from $p$ to $q$, the difference $|q-x|-|p-x|$ changes sign.
+Thus the broken line contains a point $v$ equidistant from $p$ and $q$.
+
+Let $v'$ be the image of $v$ under point reflection about $m$.
+Note that $|p-v|\z=|q-v|=|p-v'|\z=|q-v'|$
+and $v'\ne v$, since $v\ne m$.
+By 3-point homogeneity, there is an isometry sending $v$ to $v'$ and fixing $p$ and $q$.
+By uniqueness, it must be $\sigma$;
+that is, $\sigma(v)=v'\ne v$ --- a contradiction.
+
+\parbf{Perpendicular bisector.}
+As before, $\sigma$ is the reflection in a line $\ell$.
+Let $v\notin\ell$ and $w=\sigma(v)$; we already know that $v\ne w$.
+
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-0mm
+\includegraphics{mppics/pic-110}
+\vskip-0mm
+\end{wrapfigure}
+
+We will show that
+\[x\in \ell\quad\Leftrightarrow\quad|v-x|=|w-x|;\]
+the forward implication is obvious.
+
+Let $m$ be the midpoint of $v$ and $w$, and let $\theta$ be the point reflection about $m$.
+Note that $\sigma(m)\z=m$, so $m\in\ell$.
+Further, $\rho=\theta\circ\sigma$ is the reflection in the line $vw$;
+indeed, $\rho$ fixes $v$ and $w$ and reverses~$\ell$.
+
+Suppose $|v-x|=|w-x|$.
+If $x\notin \ell$, then $\sigma(x)\ne x$ and $\theta(x)\ne x$.
+All three points $x$, $\sigma(x)$, and $\theta(x)$ have the same distances to $v$ and $w$;
+thus $\sigma(x)=\theta(x)$ and $x=\rho(x)$, that is, $x$ lies on the line $vw$.
+Since $|v-x|=|w-x|$, we get $x=m\in\ell$ --- a contradiction.
+
+
+\parbf{Half-planes.}
+Let
+\begin{align*}
+V&=\set{x\in M}{|v-x|<|w-x|}
+&&\text{and}&
+W&=\set{x\in M}{|v-x|>|w-x|}.
+\end{align*}
+Since $V\ni v$ and $W\ni w$, both sets are nonempty.
+A segment joining points in different sets must meet $\ell$,
+since the difference of the distances to $v$ and $w$ changes sign along it.
+
+We will show that $V$ and $W$ are \emph{convex}, that is, each contains the geodesic joining any two of its points.
+Indeed, if $x\in V$, then the triangle inequality gives $[vx]\subset V$.
+
+Now let $x,y\in V$.
+The broken line $[xv]\cup[vy]$ lies in $V$ and hence does not meet $\ell$.
+On this broken line, the distances to $x$ and $\sigma(x)$ cannot be equal; this is possible only on $\ell$.
+At its start, $0=|x-x|<|\sigma(x)-x|$, so at its end, $|x-y|<|\sigma(x)-y|$.
+If $[xy]$ contained a point $z\in\ell$, then
+\[|\sigma(x)-y|\le |\sigma(x)-z|+|z-y|=|x-z|+|z-y|=|x-y|\]
+--- a contradiction.
+Thus $[xy]$ does not meet $\ell$ and, by continuity, lies entirely in~$V$.
+The same argument proves convexity of $W$.
+
+Note that this implies Pasch's axiom: \textit{a line that avoids the vertices of a triangle and meets one of its sides must also meet one of the other two sides.}
+
+\parbf{Final steps.}
+It remains to check that these properties imply the axioms of a neutral plane.
+The verification is fairly simple; we suggest using whichever system of axioms the reader knows best.
+
+For example, one can use Tarski's compact system~\cite{tarski}, omitting axiom A8 (equivalent to Euclid's fifth postulate).
+The notions translate directly into metric terms.
+Instead of the axiom schema A13, we can use the stronger full continuity axiom \cite[p. 18]{tarski}; it holds since lines are isometric to $\mathbb R$.
+%Axiom A12 follows from the paragraph on the perpendicular bisector.
+
+\parit{We used AI to discuss the proof, search the literature, and edit the text.}
+
+{\sloppy
+\def\emph{\textit}
+\printbibliography[heading=bibintoc]\fussy}
+\end{document}
+
