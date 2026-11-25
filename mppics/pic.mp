@@ -427,6 +427,7 @@ label.bot (btex $p$ etex,  z.p);
 label.rt (btex $m$ etex,  z.m+(1,-1));
 label.bot (btex $v$ etex,  z.v);
 label.top (btex $w$ etex,  z.w);
+label.top (btex $\ell$ etex,  1.5[z.p,z.m]);
 whitelabel (btex $r_0$ etex,  .5[z.m,z.v]);
 whitelabel (btex $r_0$ etex,  .5[z.m,z.w]);
 endfig;
