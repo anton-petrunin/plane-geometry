@@ -36,8 +36,7 @@ A nontrivial 3-point-homogeneous geodesic space is isometric to a Euclidean or L
 if for any two distinct points there is exactly one nonidentity isometry fixing both.
 \end{thm}
 
-We assume that Lobachevsky plane may have any constant negative curvature;
-in particular, rescaling of a Lobachevsky plane is another Lobachevsky plane.
+We allow a Lobachevsky plane to have any constant negative curvature, so rescaling one gives another.
 
 Let us spell out the terms.
 A space is \emph{nontrivial} if it has at least two points.
@@ -55,16 +54,15 @@ The points in a triple need not be distinct; in particular, 3-point homogeneity 
 
 In a Euclidean or Lobachevsky plane, the only nonidentity isometry fixing two distinct points is, of course, reflection in the line thru them.
 Thus the last condition of the theorem can be regarded as the \emph{unique reflection axiom}.
-To characterize the Euclidean plane, we can add the following \emph{doubling axiom}:
+To characterize the Euclidean plane, we could add the following \emph{doubling axiom}:
 
 \smallskip
-
 
 \noindent\hskip2.5em\textit{The space is isometric to a copy of itself with all distances doubled.}
 
-
 \smallskip
 
+\noindent
 It follows from the theorem since a Lobachevsky plane is not isometric to a copy of itself with doubled metric.
 
 \medskip
@@ -72,7 +70,7 @@ It follows from the theorem since a Lobachevsky plane is not isometric to a copy
 The theorem provides a metric axiomatization of plane geometry.
 A similar system was developed by Birger Iversen \cite{iversen}.
 Both systems are built on metric spaces and their symmetries.
-Iversen assumes a existence of lines (two-side-infinite geodesics), and we construct them --- this is the main difference.
+Iversen assumes that any two distinct points lie on a unique line (an isometric copy of $\RR$), and we prove this --- this is the main difference.
 
 Our proof is based on Iversen's classification theorem, which is stated at the very end.
 This note was prompted by another result of ours~\cite{lebedeva-petrunin}.%%%???
@@ -197,7 +195,7 @@ We now have two distinct nonidentity isometries fixing $p$ and $m$ --- a contrad
 
 Thus $d=\infty$, and every segment of the local geodesic $\gamma$ is a geodesic;
 that is, $\gamma$ is a geodesic, an isometric embedding of the whole real line into $M$.
-The image of such a geodesic will be called a line \emph{lines}.
+The image of such a geodesic will be called a \emph{line}.
 
 Let us check that the geodesic between points $x$ and $y$ is unique.
 Suppose there are two.
@@ -216,7 +214,9 @@ Thus there is a unique line thru any two distinct points.
 There is also a unique nonidentity isometry fixing every point on a given line; we call it the \emph{reflection} in that line.
 The assumptions of the theorem also imply that a reflection is an involution; that is, it is its own inverse.
 
-\parbf{An isosceles triangle.}
+\parbf{Half-planes.}
+The following argument is due to Benjamin Kagan~\cite[Satz~30]{kagan1902}.
+
 Choose two geodesics $[av]$ and $[aw]$ of equal positive length on distinct lines thru $a$.
 Such lines exist since any given line is fixed pointwise by a nonidentity isometry, so there are points outside it.
 Let $m$ be the midpoint of $[vw]$.
