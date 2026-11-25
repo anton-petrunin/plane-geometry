@@ -26,7 +26,7 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We characterize Euclidean and Lobachevsky planes as metric spaces with three metric conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
+We characterize Euclidean and Lobachevsky planes as metric spaces by three conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
 \end{abstract}
 
 We assume that the reader is not afraid of metric spaces.
@@ -36,8 +36,8 @@ A nontrivial 3-point-homogeneous geodesic space is isometric to a Euclidean or L
 if for any two distinct points there is exactly one nonidentity isometry fixing both.
 \end{thm}
 
-Lobachevsky plane can have arbitrary negative curvature;
-in particular rescaling of a Lobachevsky plane is another Lobachevsky plane.
+We assume that Lobachevsky plane may have any constant negative curvature;
+in particular, rescaling of a Lobachevsky plane is another Lobachevsky plane.
 
 Let us spell out the terms.
 A space is \emph{nontrivial} if it has at least two points.
@@ -57,24 +57,27 @@ In a Euclidean or Lobachevsky plane, the only nonidentity isometry fixing two di
 Thus the last condition of the theorem can be regarded as the \emph{unique reflection axiom}.
 To characterize the Euclidean plane, we can add the following \emph{doubling axiom}:
 
-\begin{center}
-\textit{The space is isometric to a copy of itself with all distances doubled.}                                                                              \end{center}
+\smallskip
 
 
-It follows from the theorem since Lobachevsky plane is not isometric to a copy of itself with doubled metric.
+\noindent\hskip2.5em\textit{The space is isometric to a copy of itself with all distances doubled.}
+
+
+\smallskip
+
+It follows from the theorem since a Lobachevsky plane is not isometric to a copy of itself with doubled metric.
 
 \medskip
 
-The theorem provides a metric axiomatic of plane geometry.
-A similar system was developed by Birger Iversen \cite{iversen}
-Both systems built on metric spaces and their symmetries.
-The main difference is that Iversen assumes existance of lines between pairs of points, but we build them.
+The theorem provides a metric axiomatization of plane geometry.
+A similar system was developed by Birger Iversen \cite{iversen}.
+Both systems are built on metric spaces and their symmetries.
+Iversen assumes a existence of lines (two-side-infinite geodesics), and we construct them --- this is the main difference.
 
 Our proof is based on Iversen's classification theorem, which is stated at the very end.
-
-Note that we do not assume local compactness; otherwise the theorem would follow at once from a theorem of Jacques Tits~\cite[IV.E § 3.59 cor. 2]{tits}, which classifies locally compact 2-point-homogeneous geodesic spaces.
-All the ideas in the proof are elementary, and many are ancient.
 This note was prompted by another result of ours~\cite{lebedeva-petrunin}.%%%???
+
+
 
 \section*{Proof}
 
@@ -133,16 +136,16 @@ Thus the midpoints $m_1$, $m_2$, and $m_3$ are distinct, which is impossible.
 We will show that \textit{geodesics in $M$ do not branch}, that is, if
 two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz]$ contains $[xz']$ or $[xz]$ is contained in $[xz']$.
 
-If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|\z=|x-z'|\z<\eps_0$ and $z\ne z'$.
-
 {
 
 \begin{wrapfigure}{r}{35mm}
 \centering
-\vskip-0mm
+\vskip-4mm
 \includegraphics{mppics/pic-30}
 \vskip-0mm
 \end{wrapfigure}
+
+If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|\z=|x-z'|\z<\eps_0$ and $z\ne z'$.
 
 By 3-point homogeneity, there is an isometry $\sigma$ fixing $x,y$ and sending $z$ to~$z'$.
 But there is also a nonidentity isometry, say $\tau$, fixing $x$ and $z$; it must fix every point on the unique geodesic $[xz]$, including~$y$.
@@ -190,9 +193,11 @@ By our assumptions, there is another nonidentity isometry fixing $p$ and $z$;
 it must fix the unique geodesic $[pz]$, and hence every point on $\gamma$.
 We now have two distinct nonidentity isometries fixing $p$ and $m$ --- a contradiction.
 
+
+
 Thus $d=\infty$, and every segment of the local geodesic $\gamma$ is a geodesic;
 that is, $\gamma$ is a geodesic, an isometric embedding of the whole real line into $M$.
-Such geodesics will be called \emph{lines}.
+The image of such a geodesic will be called a line \emph{lines}.
 
 Let us check that the geodesic between points $x$ and $y$ is unique.
 Suppose there are two.
@@ -230,8 +235,7 @@ Thus $V$ and $\sigma(V)$ are connected.
 They are disjoint open sets covering $M\setminus\ell$, so they are its two components, and $\sigma$ swaps them.
 
 By 2-point homogeneity, an isometry of $M$ can take $\ell$ to any given line.
-Thus $M$ meets the assumptions in the following theorem of Birger Iversen.
-This theorem stated in the preface and proved in the appendix of his \cite{iversen}.
+Thus $M$ meets the assumptions in the following theorem of Birger Iversen~\cite[p.~ix]{iversen}.
 
 \begin{thm}{Classification theorem}
 A nontrivial metric space $M$ is isometric to a Euclidean plane or Lobachevsky plane if it meets the following conditions:
@@ -245,14 +249,12 @@ Thru two distinct points of $M$ there passes a unique line.
 
 \noindent\textsc{reflection axiom.}
 The complement of a given line in $M$ has two connected
-components, and here exists an isometry $\sigma$ of $M$ which fixes the points of the line, but interchanges the two connected components of its complement.
+components, and there exists an isometry $\sigma$ of $M$ which fixes the points of the line, but interchanges the two connected components of its complement.
 
 \end{thm}
 
-
-
-
 \parit{We used AI (GPT-6 Astra) to discuss the proof, search the literature, translate, and edit the text.}
+
 
 {\sloppy
 \def\emph{\textit}
