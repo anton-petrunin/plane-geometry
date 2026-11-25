@@ -405,4 +405,30 @@ label.lft (btex $\theta(x)$ etex,  z.xx);
 label.top (btex $\ell$ etex,  1.15[z.p,z.q]);
 endfig;
 
+beginfig(120)
+save u,p;
+path p[];
+u:=1cm;
+
+z.p=origin;
+z.v=(2,0)*u;
+z.w=z.v rotated 55;
+z.m=.5[z.v,z.w];
+
+draw z.p--z.v--z.w--cycle;
+draw ddline(z.p,z.m)(.2,.7);
+
+dOt z.p,z.v,z.w,z.m;
+
+rimmark(z.p--z.v,z.p--z.w);
+
+
+label.bot (btex $p$ etex,  z.p);
+label.rt (btex $m$ etex,  z.m+(1,-1));
+label.bot (btex $v$ etex,  z.v);
+label.top (btex $w$ etex,  z.w);
+whitelabel (btex $r_0$ etex,  .5[z.m,z.v]);
+whitelabel (btex $r_0$ etex,  .5[z.m,z.w]);
+endfig;
+
 end

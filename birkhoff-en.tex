@@ -2,7 +2,7 @@
 \usepackage{paper-en}
 \usepackage{hyperref}
 
-\def\thetitle{(Sym)metric plane spotting}
+\def\thetitle{(Sym)metric planespotting}
 \def\theauthors{Nina Lebedeva and Anton Petrunin}
 
 \hypersetup{colorlinks=true,
@@ -26,7 +26,7 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We characterize Euclidean and Lobachevsky planes as metric spaces by three conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
+We characterize Euclidean and Lobachevsky planes as metric spaces that meet three conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
 \end{abstract}
 
 We assume that the reader is not afraid of metric spaces.
@@ -164,7 +164,7 @@ Thus
 \[|\gamma(t)-\gamma(s)|=|t-s|\quad\text{if}\quad |t-s|<d.
 \eqlbl{eq:|t-s|}\]
 
-Suppose $d<\infty$; then by continuity, \ref{eq:|t-s|} also holds when $|t-s|=d$.
+%Suppose $d<\infty$; then by continuity, \ref{eq:|t-s|} also holds when $|t-s|=d$.
 Choose a small $\eps>0$ and set
 \[p=\gamma(0),
 \quad x=\gamma(d+\eps),
@@ -208,27 +208,34 @@ The two geodesics branch, which is impossible.
 
 Thus there is a unique line thru any two distinct points.
 There is also a unique nonidentity isometry fixing every point on a given line; we call it the \emph{reflection} in that line.
-The assumptions of the theorem also imply that a reflection is an involution; that is, it is its own inverse.
+The assumptions of the theorem also imply that a reflection is an involution, meaning that it is its own inverse.
 
 \parbf{Half-planes.}
 The first step in the following argument is due to Benjamin Kagan~\cite[Satz~30]{kagan1902}.
 
-Choose two geodesics $[av]$ and $[aw]$ of equal positive length on distinct lines thru $a$.
+\begin{wrapfigure}{r}{35mm}
+\centering
+\vskip-5mm
+\includegraphics{mppics/pic-120}
+\vskip-0mm
+\end{wrapfigure}
+
+Choose two geodesics $[pv]$ and $[pw]$ of equal length on distinct lines thru $p$.
 Such lines exist since any given line is fixed pointwise by a nonidentity isometry, so there are points outside it.
 Let $m$ be the midpoint of $[vw]$.
-By 3-point homogeneity, there is an isometry $\sigma$ fixing $a$ and swapping $v$ and~$w$.
-It fixes $m$ and hence fixes the line $\ell=am$ pointwise.
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $p$ and swapping $v$ and~$w$.
+It fixes $m$ and hence fixes the line $pm$ pointwise; denote this line by $\ell$.
 
 We claim that $\ell$ consists of all points equidistant from $v$ and $w$.
-On each half-line of $\ell$ from $m$, the common distance to $v$ and $w$ starts at $R=\tfrac12|v-w|$ and tends to infinity.
-Thus for each $r>R$ there is a point on each half-line at distance $r$ from both $v$ and $w$.
+On each half-line of $\ell$ from $m$, the common distance to $v$ and $w$ starts at $r_0=\tfrac12\cdot|v-w|$ and tends to infinity.
+Thus for each $r>r_0$ there is a point on each half-line at distance $r$ from both $v$ and $w$.
 Since two distances to $v$ and $w$ leave only two possibilities, there is no third.
-For $r=R$ there is only the midpoint $m$, and $r<R$ is ruled out by the triangle inequality.
+For $r=r_0$ there is only the midpoint $m$, and $r<r_0$ is ruled out by the triangle inequality.
 
-Let $V=\set{x\in M}{|x-v|<|x-w|}$.
+Let
+\[V=\set{x\in M}{|x-v|<|x-w|}.\]
 If $x\in V$, then $[vx]\subset V$ by the triangle inequality.
-Thus $V$ and $\sigma(V)$ are connected.
-They are disjoint open sets covering $M\setminus\ell$, so they are its two components, and $\sigma$ swaps them.
+Thus $V$ and $\sigma(V)$ are connected disjoint open sets covering $M\setminus\ell$, so they are its two components, and $\sigma$ swaps them.
 
 By 2-point homogeneity, an isometry of $M$ can take $\ell$ to any given line.
 Thus $M$ meets the assumptions in the following theorem of Birger Iversen~\cite[p.~ix]{iversen}.
