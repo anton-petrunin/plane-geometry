@@ -2,7 +2,7 @@
 %%BoundingBox: -43 -21 46 35 
 %%HiResBoundingBox: -42.02815 -20.76529 45.76295 34.27078 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2026.10.18:2219
+%%CreationDate: 2026.11.04:1439
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font UVKJAO-CMMI10
@@ -433,8 +433,6 @@ newpath -29.57877 14.3758 moveto
 -30.49722 13.1258 -30.1793 13.2575 -29.9449 13.49193 curveto
 -29.71048 13.72633 -29.57877 14.04425 -29.57877 14.3758 curveto closepath fill
  0 0 0 setrgbcolor [] 0 setdash
-newpath -31.28642 6.84053 moveto
--35.13234 7.8843 lineto stroke
 newpath 35.13234 7.8843 moveto
 31.28642 6.84053 lineto stroke
 newpath 31.28642 -6.84053 moveto

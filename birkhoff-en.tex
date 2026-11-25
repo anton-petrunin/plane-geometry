@@ -2,7 +2,7 @@
 \usepackage{paper-en}
 \usepackage{hyperref}
 
-\def\thetitle{An axiom of unique reflection}
+\def\thetitle{(Sym)metric plane spotting}
 \def\theauthors{Nina Lebedeva and Anton Petrunin}
 
 \hypersetup{colorlinks=true,
@@ -26,15 +26,18 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We characterize neutral planes by three metric conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
+We characterize Euclidean and Lobachevsky planes as metric spaces with three metric conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
 \end{abstract}
 
-We assume that the reader is not afraid of metric spaces or the axioms of neutral geometry.
+We assume that the reader is not afraid of metric spaces or the axiomatic approach to classical geometry.
 
 \begin{thm}{Theorem}\label{thm:main}
-A nontrivial 3-point-homogeneous geodesic space is isometric to a neutral plane
+A nontrivial 3-point-homogeneous geodesic space is isometric to a Euclidean and Lobachevsky plane
 if for any two distinct points there is exactly one nonidentity isometry fixing both.
 \end{thm}
+
+Lobachevsky plane can have arbitrary negative curvature;
+in particular rescaling of a Lobachevsky plane is another Lobachevsky plane.
 
 Let us spell out the terms.
 A space is \emph{nontrivial} if it has at least two points.
@@ -50,7 +53,7 @@ A metric space $M$ is \emph{3-point-homogeneous} if for any points $x_1$, $x_2$,
 Here $|p-q|$ denotes the distance between points $p,q\in M$.
 The points in a triple need not be distinct; in particular, 3-point homogeneity implies 2-point homogeneity and ordinary (1-point) homogeneity.
 
-In a neutral plane, the only nonidentity isometry fixing two distinct points is, of course, reflection in the line thru them.
+In a Euclidean or Lobachevsky plane, the only nonidentity isometry fixing two distinct points is, of course, reflection in the line thru them.
 Thus the last condition of the theorem can be regarded as the \emph{unique reflection axiom}.
 To characterize the Euclidean plane, we can add the following \emph{doubling axiom}:
 
@@ -58,14 +61,18 @@ To characterize the Euclidean plane, we can add the following \emph{doubling axi
 
 \medskip
 
-We formulate our axioms in purely metric terms.
-%This naturally brings together metric geometry and the foundations of geometry and may be useful in teaching.
-A closely related approach was proposed by George Birkhoff \cite{birkhoff1932}, but he used angle measure as an additional primitive notion.
+It follows from the theorem since Lobachevsky plane is not isometric to a copy of itself with doubled metric.
+
+\medskip
+
+Note that we write our axioms in purely metric terms.
+This naturally brings together metric geometry and the foundations of geometry.
+A closely related but not purely metric approach was proposed by George Birkhoff \cite{birkhoff1932}.
 Using side-side-side congruence in this setting is not new.
 It was used by Karol Borsuk and Wanda Szmielew \cite[part I chap. II § 4]{borsuk-szmielew}, and by Alexandr Alexandrov \cite{alexandrov1994};
 in both cases, equality of angles is defined thru equality of sides of auxiliary triangles.
 
-Note that we do not assume local compactness; otherwise our theorem would follow at once from a theorem of Jacques Tits~\cite[IV.E § 3.59 cor. 2]{tits}, which classifies locally compact 2-point-homogeneous geodesic spaces.
+Note that we do not assume local compactness; otherwise the theorem would follow at once from a theorem of Jacques Tits~\cite[IV.E § 3.59 cor. 2]{tits}, which classifies locally compact 2-point-homogeneous geodesic spaces.
 All the ideas in the proof are elementary, and many are ancient.
 This note was prompted by another result of ours~\cite{lebedeva-petrunin}.%%%???
 
@@ -122,6 +129,10 @@ Note that $m_3\ne m_1$ and $m_3\ne m_2$; the latter follows since
 \[|m_3-m_1|\le |x-y|<\eps_0=|m_1-m_2|.\]
 Thus the midpoints $m_1$, $m_2$, and $m_3$ are distinct, which is impossible.
 
+\parbf{No branching.}
+We will show that \textit{geodesics in $M$ do not branch}, that is, if
+two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz]$ contains $[xz']$ or $[xz]$ is contained in $[xz']$.
+
 {
 
 \begin{wrapfigure}{r}{35mm}
@@ -131,19 +142,14 @@ Thus the midpoints $m_1$, $m_2$, and $m_3$ are distinct, which is impossible.
 \vskip-0mm
 \end{wrapfigure}
 
-\parbf{No branching.}
-We will show that \textit{geodesics in $M$ do not branch}, that is, if
-two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz]$ contains $[xz']$ or $[xz]$ is contained in $[xz']$.
+If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|\z=|x-z'|\z<\eps_0$ and $z\ne z'$.
 
-If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|=|x-z'|<\eps_0$ and $z\ne z'$.
-
-
-
-By 3-point homogeneity, there is an isometry $\sigma$ fixing $x,y$ and sending $z$ to $z'$.
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $x,y$ and sending $z$ to~$z'$.
 But there is also a nonidentity isometry, say $\tau$, fixing $x$ and $z$; it must fix every point on the unique geodesic $[xz]$, including~$y$.
 Thus $\sigma$ and $\tau$ are two distinct nonidentity isometries fixing $x$ and $y$ --- a contradiction.
 
 }
+
 
 \parbf{Lines.}
 Any geodesic can be extended to a \emph{local geodesic} $\gamma\colon\mathbb R\to M$; this means that sufficiently short segments of $\gamma$ are geodesics.
@@ -213,7 +219,7 @@ By uniqueness of the line, the map $\theta\colon x\mapsto x'$ is well defined.
 We will show that it is an isometry.
 This isometry will be called the \emph{point reflection} about $m$.
 
-\begin{figure}[h!]
+\begin{figure}[t!]
 \centering
 \vskip-0mm
 \includegraphics{mppics/pic-60}
@@ -226,8 +232,8 @@ for any two points $x$ and $y$.
 We may assume that $m$, $x$, and $y$ are pairwise distinct; otherwise there is nothing to prove.
 
 Choose $\eps>0$ smaller than $|m-x|$ and $|m-y|$, and points $\bar x\in[mx]$ and $\bar y\in[my]$ at distance $\eps$ from $m$.
-By 3-point homogeneity, there is an isometry $\sigma$ fixing $m$ and swapping $\bar x$ and $\bar y'$.
-It sends lines to lines, so it also swaps $\bar x'$ and $\bar y$.
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $m$ and swapping $\bar x$ and~$\bar y'$.
+It sends lines to lines, so it also swaps $\bar x'$ and~$\bar y$.
 In particular, $|\bar x-\bar y|=|\bar x'-\bar y'|$.
 Again by 3-point homogeneity, there is an isometry fixing $m$ and sending $\bar x\mapsto \bar x'$ and $\bar y\mapsto \bar y'$.
 By uniqueness of extension, it sends $x\mapsto x'$ and $y\mapsto y'$;
@@ -297,8 +303,8 @@ A segment joining points in different sets must meet $\ell$,
 since the difference of the distances to $v$ and $w$ changes sign along it.
 
 We will show that $V$ and $W$ are \emph{convex}, that is, each contains the geodesic joining any two of its points.
-Indeed, if $x\in V$, then the triangle inequality gives $[vx]\subset V$.
 
+If $x\in V$, then the triangle inequality gives $[vx]\subset V$.
 Now let $x,y\in V$.
 The broken line $[xv]\cup[vy]$ lies in $V$ and hence does not meet $\ell$.
 On this broken line, the distances to $x$ and $\sigma(x)$ cannot be equal; this is possible only on $\ell$.
@@ -312,15 +318,17 @@ The same argument proves convexity of $W$.
 Note that this implies Pasch's axiom: \textit{a line that avoids the vertices of a triangle and meets one of its sides must also meet one of the other two sides.}
 
 \parbf{Final steps.}
-It remains to check that these properties imply the axioms of a neutral plane.
-The verification is fairly simple; we suggest using whichever system of axioms the reader knows best.
+Now we need to check that the proved statements imply the axioms of a neutral plane;
+once it is done the theorem follows.
+This verification is fairly simple, but it depends on the choice of the axiomatic.
+We suggest using whichever system of axioms the reader knows best.
 
-For example, one can use Tarski's compact system~\cite{tarski}, omitting axiom A8 (equivalent to Euclid's fifth postulate).
+For example, one can use Tarski's system~\cite{tarski}, omitting axiom A8 (equivalent to Euclid's fifth postulate).
 The notions translate directly into metric terms.
 Instead of the axiom schema A13, we can use the stronger full continuity axiom \cite[p. 18]{tarski}; it holds since lines are isometric to $\mathbb R$.
 %Axiom A12 follows from the paragraph on the perpendicular bisector.
 
-\parit{We used AI to discuss the proof, search the literature, and edit the text.}
+\parit{We used AI (GPT-6 Astra) to discuss the proof, search the literature, translate, and edit the text.}
 
 {\sloppy
 \def\emph{\textit}

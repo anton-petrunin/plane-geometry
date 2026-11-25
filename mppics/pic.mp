@@ -136,7 +136,7 @@ drawdblarrow subpath (.15,.85) of p4 dashed evenly;
 
 dOt z.p,z.q,z.x,z.y,z.z;
 
-rimmark(p1,p2,p3);
+rimmark(p2,p3);
 
 label.lft (btex $p$ etex,  z.p);
 label.rt (btex $m$ etex,  z.q);
