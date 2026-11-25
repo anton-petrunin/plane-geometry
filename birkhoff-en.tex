@@ -29,10 +29,10 @@ pdfauthor={\theauthors}
 We characterize Euclidean and Lobachevsky planes as metric spaces with three metric conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
 \end{abstract}
 
-We assume that the reader is not afraid of metric spaces or the axiomatic approach to classical geometry.
+We assume that the reader is not afraid of metric spaces.
 
 \begin{thm}{Theorem}\label{thm:main}
-A nontrivial 3-point-homogeneous geodesic space is isometric to a Euclidean and Lobachevsky plane
+A nontrivial 3-point-homogeneous geodesic space is isometric to a Euclidean or Lobachevsky plane
 if for any two distinct points there is exactly one nonidentity isometry fixing both.
 \end{thm}
 
@@ -57,20 +57,20 @@ In a Euclidean or Lobachevsky plane, the only nonidentity isometry fixing two di
 Thus the last condition of the theorem can be regarded as the \emph{unique reflection axiom}.
 To characterize the Euclidean plane, we can add the following \emph{doubling axiom}:
 
-\parit{The space is isometric to a copy of itself with all distances doubled.}
+\begin{center}
+\textit{The space is isometric to a copy of itself with all distances doubled.}                                                                              \end{center}
 
-\medskip
 
 It follows from the theorem since Lobachevsky plane is not isometric to a copy of itself with doubled metric.
 
 \medskip
 
-Note that we write our axioms in purely metric terms.
-This naturally brings together metric geometry and the foundations of geometry.
-A closely related but not purely metric approach was proposed by George Birkhoff \cite{birkhoff1932}.
-Using side-side-side congruence in this setting is not new.
-It was used by Karol Borsuk and Wanda Szmielew \cite[part I chap. II § 4]{borsuk-szmielew}, and by Alexandr Alexandrov \cite{alexandrov1994};
-in both cases, equality of angles is defined thru equality of sides of auxiliary triangles.
+The theorem provides a metric axiomatic of plane geometry.
+A similar system was developed by Birger Iversen \cite{iversen}
+Both systems built on metric spaces and their symmetries.
+The main difference is that Iversen assumes existance of lines between pairs of points, but we build them.
+
+Our proof is based on Iversen's classification theorem, which is stated at the very end.
 
 Note that we do not assume local compactness; otherwise the theorem would follow at once from a theorem of Jacques Tits~\cite[IV.E § 3.59 cor. 2]{tits}, which classifies locally compact 2-point-homogeneous geodesic spaces.
 All the ideas in the proof are elementary, and many are ancient.
@@ -133,6 +133,8 @@ Thus the midpoints $m_1$, $m_2$, and $m_3$ are distinct, which is impossible.
 We will show that \textit{geodesics in $M$ do not branch}, that is, if
 two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz]$ contains $[xz']$ or $[xz]$ is contained in $[xz']$.
 
+If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|\z=|x-z'|\z<\eps_0$ and $z\ne z'$.
+
 {
 
 \begin{wrapfigure}{r}{35mm}
@@ -141,8 +143,6 @@ two geodesics $[xz]$ and $[xz']$ contain a nontrivial geodesic $[xy]$, then $[xz
 \includegraphics{mppics/pic-30}
 \vskip-0mm
 \end{wrapfigure}
-
-If geodesics branched, we could shorten them and move $x$ closer to the branching point so that $|x-z|\z=|x-z'|\z<\eps_0$ and $z\ne z'$.
 
 By 3-point homogeneity, there is an isometry $\sigma$ fixing $x,y$ and sending $z$ to~$z'$.
 But there is also a nonidentity isometry, say $\tau$, fixing $x$ and $z$; it must fix every point on the unique geodesic $[xz]$, including~$y$.
@@ -211,122 +211,46 @@ Thus there is a unique line thru any two distinct points.
 There is also a unique nonidentity isometry fixing every point on a given line; we call it the \emph{reflection} in that line.
 The assumptions of the theorem also imply that a reflection is an involution; that is, it is its own inverse.
 
-\parbf{Point reflection.}
-Choose a point $m$.
-Given a point $x$, extend the geodesic $[xm]$ beyond $m$ by its own length.
-Denote the opposite endpoint by $x'$ and set $m'=m$.
-By uniqueness of the line, the map $\theta\colon x\mapsto x'$ is well defined.
-We will show that it is an isometry.
-This isometry will be called the \emph{point reflection} about $m$.
+\parbf{An isosceles triangle.}
+Choose two geodesics $[av]$ and $[aw]$ of equal positive length on distinct lines thru $a$.
+Such lines exist since any given line is fixed pointwise by a nonidentity isometry, so there are points outside it.
+Let $m$ be the midpoint of $[vw]$.
+By 3-point homogeneity, there is an isometry $\sigma$ fixing $a$ and swapping $v$ and~$w$.
+It fixes $m$ and hence fixes the line $\ell=am$ pointwise.
 
-\begin{figure}[t!]
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-60}
-\vskip-0mm
-\end{figure}
+We claim that $\ell$ consists of all points equidistant from $v$ and $w$.
+On each half-line of $\ell$ from $m$, the common distance to $v$ and $w$ starts at $R=\tfrac12|v-w|$ and tends to infinity.
+Thus for each $r>R$ there is a point on each half-line at distance $r$ from both $v$ and $w$.
+Since two distances to $v$ and $w$ leave only two possibilities, there is no third.
+For $r=R$ there is only the midpoint $m$, and $r<R$ is ruled out by the triangle inequality.
 
-Since $x''=x$, the map $\theta\colon x\mapsto x'$ is bijective, so it suffices to check that
-\[|x'-y'|=|x-y|\eqlbl{eq:xy=xy}\]
-for any two points $x$ and $y$.
-We may assume that $m$, $x$, and $y$ are pairwise distinct; otherwise there is nothing to prove.
+Let $V=\set{x\in M}{|x-v|<|x-w|}$.
+If $x\in V$, then $[vx]\subset V$ by the triangle inequality.
+Thus $V$ and $\sigma(V)$ are connected.
+They are disjoint open sets covering $M\setminus\ell$, so they are its two components, and $\sigma$ swaps them.
 
-Choose $\eps>0$ smaller than $|m-x|$ and $|m-y|$, and points $\bar x\in[mx]$ and $\bar y\in[my]$ at distance $\eps$ from $m$.
-By 3-point homogeneity, there is an isometry $\sigma$ fixing $m$ and swapping $\bar x$ and~$\bar y'$.
-It sends lines to lines, so it also swaps $\bar x'$ and~$\bar y$.
-In particular, $|\bar x-\bar y|=|\bar x'-\bar y'|$.
-Again by 3-point homogeneity, there is an isometry fixing $m$ and sending $\bar x\mapsto \bar x'$ and $\bar y\mapsto \bar y'$.
-By uniqueness of extension, it sends $x\mapsto x'$ and $y\mapsto y'$;
-hence \ref{eq:xy=xy}.
+By 2-point homogeneity, an isometry of $M$ can take $\ell$ to any given line.
+Thus $M$ meets the assumptions in the following theorem of Birger Iversen.
+This theorem stated in the preface and proved in the appendix of his \cite{iversen}.
 
-\begin{wrapfigure}{r}{35mm}
-\centering
-\vskip-8mm
-\includegraphics{mppics/pic-100}
-\vskip-0mm
-\end{wrapfigure}
+\begin{thm}{Classification theorem}
+A nontrivial metric space $M$ is isometric to a Euclidean plane or Lobachevsky plane if it meets the following conditions:
 
-\parbf{Line reflections.}
-Let $\sigma$ be the reflection in a line $\ell$.
-We will show that \textit{$\sigma$ fixes only points on $\ell$}.
+\smallskip
 
-Choose two distinct points $p$ and $q$ on $\ell$, and let $m$ be their midpoint.
-Suppose $\sigma(u)=u$ for some point $u\notin\ell$.
-Then $\sigma$ fixes every point on the broken line $[pu]\cup[uq]$.
-By uniqueness of lines, the broken line does not pass thru $m$.
-As a point $x$ moves along the broken line from $p$ to $q$, the difference $|q-x|-|p-x|$ changes sign.
-Thus the broken line contains a point $v$ equidistant from $p$ and $q$.
+\noindent\textsc{incidence axiom.}
+Thru two distinct points of $M$ there passes a unique line.
 
-Let $v'$ be the image of $v$ under point reflection about $m$.
-Note that $|p-v|\z=|q-v|=|p-v'|\z=|q-v'|$
-and $v'\ne v$, since $v\ne m$.
-By 3-point homogeneity, there is an isometry sending $v$ to $v'$ and fixing $p$ and $q$.
-By uniqueness, it must be $\sigma$;
-that is, $\sigma(v)=v'\ne v$ --- a contradiction.
+\smallskip
 
-\parbf{Perpendicular bisector.}
-As before, $\sigma$ is the reflection in a line $\ell$.
-Let $v\notin\ell$ and $w=\sigma(v)$; we already know that $v\ne w$.
+\noindent\textsc{reflection axiom.}
+The complement of a given line in $M$ has two connected
+components, and here exists an isometry $\sigma$ of $M$ which fixes the points of the line, but interchanges the two connected components of its complement.
 
-\begin{wrapfigure}{r}{35mm}
-\centering
-\vskip-0mm
-\includegraphics{mppics/pic-110}
-\vskip-0mm
-\end{wrapfigure}
-
-We will show that
-\[x\in \ell\quad\Leftrightarrow\quad|v-x|=|w-x|;\]
-the forward implication is obvious.
-
-Let $m$ be the midpoint of $v$ and $w$, and let $\theta$ be the point reflection about $m$.
-Note that $\sigma(m)\z=m$, so $m\in\ell$.
-Further, $\rho=\theta\circ\sigma$ is the reflection in the line $vw$;
-indeed, $\rho$ fixes $v$ and $w$ and reverses~$\ell$.
-
-Suppose $|v-x|=|w-x|$.
-If $x\notin \ell$, then $\sigma(x)\ne x$ and $\theta(x)\ne x$.
-All three points $x$, $\sigma(x)$, and $\theta(x)$ have the same distances to $v$ and $w$;
-thus $\sigma(x)=\theta(x)$ and $x=\rho(x)$, that is, $x$ lies on the line $vw$.
-Since $|v-x|=|w-x|$, we get $x=m\in\ell$ --- a contradiction.
+\end{thm}
 
 
-\parbf{Half-planes.}
-Let
-\begin{align*}
-V&=\set{x\in M}{|v-x|<|w-x|}
-&&\text{and}&
-W&=\set{x\in M}{|v-x|>|w-x|}.
-\end{align*}
-Since $V\ni v$ and $W\ni w$, both sets are nonempty.
-A segment joining points in different sets must meet $\ell$,
-since the difference of the distances to $v$ and $w$ changes sign along it.
 
-We will show that $V$ and $W$ are \emph{convex}, that is, each contains the geodesic joining any two of its points.
-
-If $x\in V$, then the triangle inequality gives $[vx]\subset V$.
-Now let $x,y\in V$.
-The broken line $[xv]\cup[vy]$ lies in $V$ and hence does not meet $\ell$.
-On this broken line, the distances to $x$ and $\sigma(x)$ cannot be equal; this is possible only on $\ell$.
-At its start, $0=|x-x|<|\sigma(x)-x|$, so at its end, $|x-y|<|\sigma(x)-y|$.
-If $[xy]$ contained a point $z\in\ell$, then
-\[|\sigma(x)-y|\le |\sigma(x)-z|+|z-y|=|x-z|+|z-y|=|x-y|\]
---- a contradiction.
-Thus $[xy]$ does not meet $\ell$ and, by continuity, lies entirely in~$V$.
-The same argument proves convexity of $W$.
-
-Note that this implies Pasch's axiom: \textit{a line that avoids the vertices of a triangle and meets one of its sides must also meet one of the other two sides.}
-
-\parbf{Final steps.}
-Now we need to check that the proved statements imply the axioms of a neutral plane;
-once it is done the theorem follows.
-This verification is fairly simple, but it depends on the choice of the axiomatic.
-We suggest using whichever system of axioms the reader knows best.
-
-For example, one can use Tarski's system~\cite{tarski}, omitting axiom A8 (equivalent to Euclid's fifth postulate).
-The notions translate directly into metric terms.
-Instead of the axiom schema A13, we can use the stronger full continuity axiom \cite[p. 18]{tarski}; it holds since lines are isometric to $\mathbb R$.
-%Axiom A12 follows from the paragraph on the perpendicular bisector.
 
 \parit{We used AI (GPT-6 Astra) to discuss the proof, search the literature, translate, and edit the text.}
 
