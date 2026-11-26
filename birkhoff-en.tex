@@ -26,7 +26,7 @@ pdfauthor={\theauthors}
 \maketitle
 
 \begin{abstract}
-We characterize Euclidean and Lobachevsky planes as nontrivial metric spaces that meet three conditions: existence of geodesics, side-side-side congruence, and uniqueness of reflection.
+We give a variant of the metric axioms for Euclidean and Lobachevsky plane geometry based only on geodesic segments and symmetry.
 \end{abstract}
 
 We assume that the reader is not afraid of metric spaces.
@@ -77,9 +77,11 @@ This note was prompted by another result of ours~\cite{lebedeva-petrunin}.%%%???
 
 Assume that a metric space $M$ satisfies the assumptions of our theorem.
 
+{
+
 \begin{wrapfigure}{r}{35mm}
 \centering
-\vskip-5mm
+\vskip-2mm
 \includegraphics{mppics/pic-10}
 \vskip-0mm
 \end{wrapfigure}
@@ -91,6 +93,8 @@ The distances $r=|p-x|$ and $s=|q-x|$ leave at most two possibilities for $x$.
 Indeed, there is a unique nonidentity isometry, say $\sigma$, fixing $p$ and~$q$.
 If $|p-y|=r$ and $|q-y|=s$, then 3-point homogeneity gives an isometry fixing $p$ and $q$ and sending $x$ to $y$.
 Thus $y=x$ if the isometry is the identity, and $y=\sigma(x)$ otherwise --- there is no third option.
+
+}
 
 \parbf{Local uniqueness of geodesics.}
 We will show that there is $\eps_0>0$ such that any two points $x$ and $y$ at distance less than $\eps_0$ are joined by a unique geodesic.
@@ -211,7 +215,7 @@ There is also a unique nonidentity isometry fixing every point on a given line; 
 The assumptions of the theorem also imply that a reflection is an involution, meaning that it is its own inverse.
 
 \parbf{Half-planes.}
-The first step in the following argument is due to Benjamin Kagan~\cite[Satz~30]{kagan1902}.
+The first step in the following argument was used already by Benjamin Kagan~\cite[Satz~30]{kagan1902}.
 
 \begin{wrapfigure}{r}{35mm}
 \centering
@@ -256,7 +260,7 @@ components, and there exists an isometry $\sigma$ of $M$ which fixes the points 
 
 \end{thm}
 
-\parit{We used AI (GPT-6 Astra) to discuss the proof, search the literature, translate, and edit the text.}
+\parit{We used AI (GPT-6.2 Astra) to discuss the proof, search the literature, translate, and edit the text.}
 
 
 {\sloppy
